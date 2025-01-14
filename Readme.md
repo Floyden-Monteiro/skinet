@@ -35,3 +35,13 @@ hot reload
 
 git ignore
     dotnet new gitignore
+
+drop database
+    dotnet ef database drop -p Infrastructure -s MyProject
+
+remove migration
+    dotnet ef migrations remove -p Infrastructure -s MyProject
+
+add migration
+    dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations
+
