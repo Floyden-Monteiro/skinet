@@ -38,6 +38,15 @@ public static class ApplicationServicesExtension
                 return new BadRequestObjectResult(errorResponse);
             };
         });
+
+        services.AddCors(opt =>
+        {
+            opt.AddPolicy("CorsPolicy", policy =>
+            {
+                policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+            });
+        });
+
         return services;
     }
 }
