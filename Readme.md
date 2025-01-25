@@ -154,3 +154,22 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 This project is licensed under the MIT License.
 
+
+create agurlar project
+ng new client 
+
+creat a new component
+ng g c shop
+
+create a new module
+ng g m shop
+ ng g c --flat --skip-tests shop/shop  // --flat to not create a folder for the component
+
+ you can use --dry-run to see what will be created without actually creating it.
+
+ 
+create service
+ng g s shop/shop
+
+
+ ng g m core --dry-run

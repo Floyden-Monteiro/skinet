@@ -37,7 +37,14 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -89,9 +96,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/assets"
+                "glob": "**/*"
               }
             ],
             "styles": [
@@ -104,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "fca44f20-6d54-4bce-a220-642f89fd8fe8"
+    "analytics": "9fca3886-4b5f-48bb-b76c-bb55ecae0b8c"
   }
 }
