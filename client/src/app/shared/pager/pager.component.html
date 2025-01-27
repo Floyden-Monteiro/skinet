@@ -1,0 +1,4 @@
+<div class="d-flex justify-content-center" *ngIf="totalCount && pageSize">
+    <ngb-pagination [(page)]="pageNumber" [pageSize]="pageSize" [collectionSize]="totalCount"
+        (pageChange)="onPagerChange($event)"></ngb-pagination>
+</div>
