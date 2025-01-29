@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   selector: 'app-server-error',
   imports: [CommonModule],
   templateUrl: './server-error.component.html',
-  styleUrls: ['./server-error.component.scss'] // Corrected from styleUrl to styleUrls
+  styleUrls: ['./server-error.component.scss'] 
 })
 export class ServerErrorComponent {
   error: any;
