@@ -9,28 +9,31 @@ import { BreadcrumbService } from 'xng-breadcrumb';
   selector: 'app-product-details',
   imports: [CommonModule],
   templateUrl: './product-details.component.html',
-  styleUrl: './product-details.component.scss'
+  styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
   product?: Product;
-  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute, private bcService : BreadcrumbService) { }
+
+  constructor(
+    private shopService: ShopService,
+    private activatedRoute: ActivatedRoute,
+    private bcService: BreadcrumbService
+  ) {}
 
   ngOnInit() {
-
     this.loadProduct();
   }
 
-
   loadProduct() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    if (id) this.shopService.getProduct(+id).subscribe({
-      next: product => {
-        this.product = product;
-        this.bcService.set('@productDetails', product.name);
-      },
-      error: err => console.log(err)
-
-    });
-
+    if (id) {
+      this.shopService.getProduct(+id).subscribe({
+        next: product => {
+          this.product = product;
+          this.bcService.set('@productDetails', product.name);
+        },
+        error: err => console.log(err)
+      });
+    }
   }
 }

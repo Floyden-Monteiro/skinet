@@ -12,7 +12,7 @@ export const routes: Routes = [
     {
       path: 'shop',
       loadComponent: () => import('./shop/shop.component').then(m => m.ShopComponent),
-      data: { breadcrumb: 'Shop' } // Add breadcrumb for shop
+      data: { breadcrumb: 'Shop' } // Added breadcrumb for shop
     },
     {
       path: 'shop/:id',
@@ -21,4 +21,3 @@ export const routes: Routes = [
     },
     { path: '**', redirectTo: '', pathMatch: 'full' }
   ];
-  
