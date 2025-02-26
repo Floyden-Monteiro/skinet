@@ -19,6 +19,10 @@ export const routes: Routes = [
       loadComponent: () => import('./basket/basket.component').then(m => m.BasketComponent),
     },
     {
+      path: 'checkout',
+      loadComponent: () => import('./checkout/checkout.component').then(m => m.CheckoutComponent),
+    },
+    {
       path: 'shop/:id',
       loadComponent: () => import('./shop/product-details.component').then(m => m.ProductDetailsComponent),
       data: { breadcrumb: { alias: 'productDetails' } }
