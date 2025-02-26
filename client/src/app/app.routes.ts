@@ -12,7 +12,11 @@ export const routes: Routes = [
     {
       path: 'shop',
       loadComponent: () => import('./shop/shop.component').then(m => m.ShopComponent),
-      data: { breadcrumb: 'Shop' } // Added breadcrumb for shop
+      data: { breadcrumb: 'Shop' } 
+    },
+    {
+      path: 'basket',
+      loadComponent: () => import('./basket/basket.component').then(m => m.BasketComponent),
     },
     {
       path: 'shop/:id',
