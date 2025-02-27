@@ -173,3 +173,6 @@ ng g s shop/shop
 
 
  ng g m core --dry-run
+
+
+  dotnet ef migrations add IdentityIntial -p Infrastructure -s API -c AppIdentityDbContext -o Identity/Migrations
